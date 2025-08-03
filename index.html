@@ -8,36 +8,25 @@
 </head>
 <body>
   <div class="todo-container">
+    <div class="todo-card">
     <h1>MyTodo List</h1>
     <div class="todo-input">
-      <input type="text" placeholder="Enter a task">
-      <button class="add-btn">ADD</button>
+      
+      <input type="text" id="input-box"   placeholder="Enter a task" >
+      <button onclick="addTask()" class="add-btn">ADD</button>
     </div>
 
-    <div class="todo-list">
-      <div class="todo-item completed">
-        <div class="icon green"><img src="Images/check.png" alt="check green" width="20px"></div>
-        <p><s>Portfolio</s></p>
-        <div class="actions">
-          <span class="check green"> <img src="Images/check.png" alt="check icon" width="20px"></span>
-          <span class="delete"></span>
-        </div>
+    <div class="todo-list" id="task-list">
+      
+        <div class="empty">Empty Todo List</div>
+        
       </div>
-
-      <div class="todo-item">
-        <div class="icon gray"> <img src="Images/check-mark.png" alt="mark icon" width="20px"><span></span></div>
-        <p>Todo list</p>
-        <div class="actions">
-          <span class="check gray"> <img   src="Images/checked.png" alt="checked icon" width="20px"></span>
-          <span class="delete"> <img src="Images/delete.png" alt="delete icon" width="20px"></span>
-        </div>
+      <div class="footer">
+        <span id="task-count">Total Tasks: 0</span>
+        <button onclick="deleteAllTasks()" class="delete-all">DELETE ALL</button>
       </div>
-    </div>
-
-    <div class="footer">
-      <span>Total Tasks: 2</span>
-      <button class="delete-all">DELETE ALL</button>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
